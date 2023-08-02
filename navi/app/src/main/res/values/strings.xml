@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="repositories">Repositories</string>
+    <string name="closed_pulls">Closed pulls</string>
+    <string name="created_at">Created at: %1$s</string>
+    <string name="closed_at">Closed at: %1$s</string>
+    <string name="no_closed_pulls_in_this_repo">No closed pulls in this repo</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="Theme.Assignment" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:navigationBarColor">@color/omdb</item>
+        <item name="android:statusBarColor">@color/omdb</item>
+        <item name="android:colorBackground">@color/omdb</item>
+    </style>
+
+</resources>
