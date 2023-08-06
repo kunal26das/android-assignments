@@ -1,0 +1,5 @@
+<resources>
+    <string name="select_focus_duration_minutes">Select Focus Duration (minutes)</string>
+    <string name="start">Start</string>
+    <string name="remaining_focus_time">Remaining Focus Time</string>
+</resources>

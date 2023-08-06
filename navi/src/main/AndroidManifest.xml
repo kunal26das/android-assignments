@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+
+        <activity
+            android:name=".repo.RepoListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Material3.DayNight"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".pull.PullListActivity"
+            android:exported="false"
+            android:label="@string/closed_pulls"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Material3.DayNight"
+            tools:ignore="LockedOrientationActivity" />
+    </application>
+</manifest>
