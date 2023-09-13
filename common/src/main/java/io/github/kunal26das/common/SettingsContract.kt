@@ -1,4 +1,4 @@
-package io.github.kunal26das.kisan_network.utils
+package io.github.kunal26das.common
 
 import android.app.Activity.RESULT_OK
 import android.content.Context

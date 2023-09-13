@@ -1,3 +1,3 @@
-package io.github.kunal26das.epifi.util
+package io.github.kunal26das.common
 
 fun interface OnItemClickListener<T> : (T?) -> Unit

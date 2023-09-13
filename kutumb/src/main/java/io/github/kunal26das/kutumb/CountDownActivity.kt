@@ -8,7 +8,7 @@ import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import io.github.kunal26das.kutumb.Constants.Companion.KEY_TIME
+import io.github.kunal26das.kutumb.Constant.KEY_TIME
 import io.github.kunal26das.kutumb.databinding.ActivityTimerBinding
 
 class CountDownActivity : AppCompatActivity() {
@@ -26,7 +26,8 @@ class CountDownActivity : AppCompatActivity() {
         super.onResume()
         localBroadcastReceiver.registerReceiver(receiver, IntentFilter(KEY_TIME))
         receiver.setOnTimeReceiveListener {
-            binding.timer.text = Constants.parse(it)
+            binding.timer.text = Constant.parse(it)
+            if (it == 0L) finish()
         }
     }
 

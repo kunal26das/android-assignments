@@ -3,13 +3,12 @@ package io.github.kunal26das.kutumb
 import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
-import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import io.github.kunal26das.kutumb.Constants.Companion.CHANNEL_TIMER
-import io.github.kunal26das.kutumb.Constants.Companion.ID_NOTIFICATION
-import io.github.kunal26das.kutumb.Constants.Companion.KEY_TIME
+import io.github.kunal26das.kutumb.Constant.CHANNEL_TIMER
+import io.github.kunal26das.kutumb.Constant.ID_NOTIFICATION
+import io.github.kunal26das.kutumb.Constant.KEY_TIME
 
 class CountDownService : Service() {
 
@@ -55,14 +54,11 @@ class CountDownService : Service() {
     }
 
     private fun startNotification(builder: NotificationCompat.Builder) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            startForeground(ID_NOTIFICATION, builder.build())
-        }
+        startForeground(ID_NOTIFICATION, builder.build())
     }
 
     companion object {
         var isRunning: Boolean = false
             private set
     }
-
 }

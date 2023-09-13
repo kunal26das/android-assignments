@@ -1,8 +1,8 @@
-package io.github.kunal26das.epifi.util
+package io.github.kunal26das.common
 
-import androidx.databinding.BindingAdapter
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import coil.load
 
 object ImageViewBindingAdapter {
@@ -16,9 +16,6 @@ object ImageViewBindingAdapter {
     @JvmStatic
     @BindingAdapter("srcCompat")
     fun ImageView.setSrcCompat(url: String?) {
-        load(url) {
-
-        }
+        load(url)
     }
-
 }

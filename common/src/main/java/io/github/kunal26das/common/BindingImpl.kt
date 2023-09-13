@@ -1,4 +1,4 @@
-package io.github.kunal26das.navi.util
+package io.github.kunal26das.common
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,15 +7,16 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 
 abstract class BindingImpl<T : ViewDataBinding>(
-    @LayoutRes layoutId: Int,
     layoutInflater: LayoutInflater,
+    @LayoutRes layoutId: Int,
     viewGroup: ViewGroup? = null,
+    attachToParent: Boolean = false,
 ) {
 
     val root get() = binding.root
 
     protected val binding = DataBindingUtil.inflate<T>(
-        layoutInflater, layoutId, viewGroup, false
+        layoutInflater, layoutId, viewGroup, attachToParent
     )!!
 
 }

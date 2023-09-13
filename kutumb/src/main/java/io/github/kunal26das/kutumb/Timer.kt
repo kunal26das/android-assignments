@@ -9,8 +9,8 @@ import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import io.github.kunal26das.kutumb.Constants.Companion.ID_NOTIFICATION
-import io.github.kunal26das.kutumb.Constants.Companion.KEY_TIME
+import io.github.kunal26das.kutumb.Constant.ID_NOTIFICATION
+import io.github.kunal26das.kutumb.Constant.KEY_TIME
 
 class Timer(
     private val context: Context,
@@ -29,7 +29,7 @@ class Timer(
         val intent = Intent(KEY_TIME)
         intent.putExtra(KEY_TIME, p0)
         localBroadcastReceiver.sendBroadcast(intent)
-        builder.setContentText(Constants.parse(p0))
+        builder.setContentText(Constant.parse(p0))
         if (ActivityCompat.checkSelfPermission(
                 context,
                 Manifest.permission.POST_NOTIFICATIONS
@@ -41,7 +41,7 @@ class Timer(
 
     override fun onFinish() {
         val intent = Intent(KEY_TIME)
-        intent.putExtra(KEY_TIME, 0)
+        intent.putExtra(KEY_TIME, 0L)
         localBroadcastReceiver.sendBroadcast(intent)
     }
 }

@@ -1,4 +1,4 @@
-package io.github.kunal26das.navi.util
+package io.github.kunal26das.common
 
 import android.content.Context
 import android.widget.LinearLayout

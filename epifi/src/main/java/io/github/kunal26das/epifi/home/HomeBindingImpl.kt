@@ -4,16 +4,16 @@ import android.content.Context
 import android.view.LayoutInflater
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
+import dagger.hilt.android.qualifiers.ActivityContext
+import dagger.hilt.android.scopes.ActivityScoped
+import io.github.kunal26das.common.BindingImpl
+import io.github.kunal26das.common.OnItemClickListener
+import io.github.kunal26das.epifi.R
+import io.github.kunal26das.epifi.databinding.ActivityHomeBinding
 import io.github.kunal26das.epifi.model.Element
 import io.github.kunal26das.epifi.model.SearchType
 import io.github.kunal26das.epifi.preference.PreferenceModule.KEY_SEARCH_QUERY
 import io.github.kunal26das.epifi.preference.PreferenceModule.KEY_SEARCH_TYPE
-import io.github.kunal26das.epifi.util.BindingImpl
-import io.github.kunal26das.epifi.util.OnItemClickListener
-import dagger.hilt.android.qualifiers.ActivityContext
-import dagger.hilt.android.scopes.ActivityScoped
-import io.github.kunal26das.epifi.R
-import io.github.kunal26das.epifi.databinding.ActivityHomeBinding
 import javax.inject.Inject
 import javax.inject.Named
 

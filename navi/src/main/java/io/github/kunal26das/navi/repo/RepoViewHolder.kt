@@ -1,9 +1,9 @@
 package io.github.kunal26das.navi.repo
 
 import androidx.recyclerview.widget.RecyclerView
+import io.github.kunal26das.common.OnItemClickListener
 import io.github.kunal26das.navi.databinding.ItemRepoBinding
 import io.github.kunal26das.navi.model.Repo
-import io.github.kunal26das.navi.util.OnItemClickListener
 
 class RepoViewHolder(
     private val binding: ItemRepoBinding

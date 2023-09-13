@@ -5,11 +5,11 @@ import android.view.View.TEXT_ALIGNMENT_CENTER
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import coil.load
-import io.github.kunal26das.epifi.model.Element
-import io.github.kunal26das.epifi.util.OnItemClickListener
 import com.google.android.material.snackbar.Snackbar
+import io.github.kunal26das.common.OnItemClickListener
 import io.github.kunal26das.epifi.R
 import io.github.kunal26das.epifi.databinding.ItemElementBinding
+import io.github.kunal26das.epifi.model.Element
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

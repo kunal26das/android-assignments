@@ -3,9 +3,9 @@ package io.github.kunal26das.epifi.home
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
+import io.github.kunal26das.common.OnItemClickListener
 import io.github.kunal26das.epifi.databinding.ItemElementBinding
 import io.github.kunal26das.epifi.model.Element
-import io.github.kunal26das.epifi.util.OnItemClickListener
 
 class ElementPagingDataAdapter :
     PagingDataAdapter<Element, ElementViewHolder>(Element.DIffCallback()) {

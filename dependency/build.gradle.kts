@@ -1,7 +1,7 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
-    kotlin("kapt")
+    id("com.google.devtools.ksp")
+    kotlin("android")
 }
 
 android {
@@ -30,6 +30,6 @@ android {
 
 dependencies {
     implementation(project(":radius:data"))
-    implementation("com.google.dagger:hilt-core:2.47")
-    kapt("com.google.dagger:hilt-android-compiler:2.47")
+    implementation("com.google.dagger:hilt-core:2.48")
+    ksp("com.google.dagger:hilt-android-compiler:2.48")
 }

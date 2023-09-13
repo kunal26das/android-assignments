@@ -5,10 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleOwner
+import io.github.kunal26das.common.BindingImpl
 import io.github.kunal26das.epifi.R
 import io.github.kunal26das.epifi.databinding.FragmentDetailInfoBinding
 import io.github.kunal26das.epifi.model.Element
-import io.github.kunal26das.epifi.util.BindingImpl
 
 class DetailInfoBindingImpl(
     layoutInflater: LayoutInflater,

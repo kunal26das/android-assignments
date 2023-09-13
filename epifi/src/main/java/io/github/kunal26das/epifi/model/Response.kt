@@ -21,5 +21,4 @@ data class Response(
 
     val response
         get() = _response?.toBoolean()
-
 }

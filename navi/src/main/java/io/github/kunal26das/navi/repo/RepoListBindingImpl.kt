@@ -2,10 +2,10 @@ package io.github.kunal26das.navi.repo
 
 import android.content.Context
 import android.view.LayoutInflater
+import io.github.kunal26das.common.BindingImpl
+import io.github.kunal26das.common.VerticalDividerItemDecoration
 import io.github.kunal26das.navi.R
 import io.github.kunal26das.navi.databinding.ActivityRepoListBinding
-import io.github.kunal26das.navi.util.BindingImpl
-import io.github.kunal26das.navi.util.VerticalDividerItemDecoration
 
 class RepoListBindingImpl(
     context: Context

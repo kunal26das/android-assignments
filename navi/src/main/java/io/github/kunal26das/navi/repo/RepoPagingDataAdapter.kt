@@ -3,9 +3,9 @@ package io.github.kunal26das.navi.repo
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
+import io.github.kunal26das.common.OnItemClickListener
 import io.github.kunal26das.navi.databinding.ItemRepoBinding
 import io.github.kunal26das.navi.model.Repo
-import io.github.kunal26das.navi.util.OnItemClickListener
 
 class RepoPagingDataAdapter : PagingDataAdapter<Repo, RepoViewHolder>(Repo.DiffCallback()) {
 

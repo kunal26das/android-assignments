@@ -11,7 +11,7 @@ import androidx.activity.result.contract.ActivityResultContract
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationManagerCompat
-import io.github.kunal26das.kutumb.Constants.Companion.CHANNEL_TIMER
+import io.github.kunal26das.kutumb.Constant.CHANNEL_TIMER
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {

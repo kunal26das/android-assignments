@@ -3,7 +3,7 @@ package io.github.kunal26das.kutumb
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import io.github.kunal26das.kutumb.Constants.Companion.KEY_TIME
+import io.github.kunal26das.kutumb.Constant.KEY_TIME
 
 class TimerReceiver : BroadcastReceiver() {
 

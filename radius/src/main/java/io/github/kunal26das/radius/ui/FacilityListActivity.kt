@@ -21,13 +21,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.lifecycleScope
-import io.github.kunal26das.radius.compose.Facility
 import dagger.hilt.android.AndroidEntryPoint
-import io.github.kunal26das.common.CustomActivity
+import io.github.kunal26das.common.Activity
+import io.github.kunal26das.radius.compose.Facility
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class FacilityListActivity : CustomActivity() {
+class FacilityListActivity : Activity() {
 
     private val viewModel by viewModels<FacilityListViewModel>()
 

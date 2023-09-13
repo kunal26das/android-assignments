@@ -2,10 +2,10 @@ package io.github.kunal26das.navi.pull
 
 import android.content.Context
 import android.view.LayoutInflater
+import io.github.kunal26das.common.BindingImpl
+import io.github.kunal26das.common.VerticalDividerItemDecoration
 import io.github.kunal26das.navi.R
 import io.github.kunal26das.navi.databinding.ActivityPullListBinding
-import io.github.kunal26das.navi.util.BindingImpl
-import io.github.kunal26das.navi.util.VerticalDividerItemDecoration
 
 class PullListBindingImpl(context: Context) : BindingImpl<ActivityPullListBinding>(
     layoutId = R.layout.activity_pull_list,

@@ -13,12 +13,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
-import io.github.kunal26das.kisan_network.contact.ContactInfoDialog
-import io.github.kunal26das.kisan_network.message.compose.NewMessageActivity
-import io.github.kunal26das.kisan_network.utils.SettingsContract
 import dagger.hilt.android.AndroidEntryPoint
 import io.github.kunal26das.kisan_network.R
+import io.github.kunal26das.kisan_network.contact.ContactInfoDialog
 import io.github.kunal26das.kisan_network.databinding.FragmentContactListBinding
+import io.github.kunal26das.kisan_network.message.compose.NewMessageActivity
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -34,7 +33,8 @@ class ContactListFragment : Fragment() {
             requireActivity(), READ_CONTACTS
         )
 
-    private val settings = registerForActivityResult(SettingsContract()) {}
+    private val settings =
+        registerForActivityResult(io.github.kunal26das.common.SettingsContract()) {}
     private val newMessageActivity = registerForActivityResult(NewMessageActivity.Contract()) {}
     private val requestReadContactsPermission =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) {

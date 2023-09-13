@@ -1,18 +1,13 @@
-package io.github.kunal26das.epifi.util
+package io.github.kunal26das.common
 
-import androidx.databinding.BindingAdapter
-import android.graphics.drawable.Drawable
 import android.view.View
-import android.widget.ImageView
 import androidx.core.view.isVisible
-import coil.load
+import androidx.databinding.BindingAdapter
 
 object ViewBindingAdapter {
-
     @JvmStatic
     @BindingAdapter("visible")
     fun View.setIsVisible(isVisible: Boolean?) {
         this.isVisible = isVisible ?: false
     }
-
 }

@@ -2,9 +2,9 @@ package io.github.kunal26das.kutumb
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContract
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import io.github.kunal26das.kutumb.databinding.ActivityMainBinding
 
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun startCountDownService(time: Int?) {
         val intent = Intent(this, CountDownService::class.java)
-        intent.putExtra(Constants.KEY_TIME, time)
+        intent.putExtra(Constant.KEY_TIME, time)
         startService(intent)
     }
 

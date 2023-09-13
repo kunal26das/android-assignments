@@ -3,8 +3,8 @@ plugins {
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
     id("com.google.devtools.ksp")
+    id("kotlin-kapt")
     kotlin("android")
-    kotlin("kapt")
 }
 
 android {
@@ -34,17 +34,14 @@ android {
     }
 }
 
-kapt {
-    correctErrorTypes = true
-}
-
 dependencies {
-    implementation("androidx.core:core-ktx:1.10.1")
+    implementation(project(mapOf("path" to ":common")))
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
-    implementation("androidx.paging:paging-runtime-ktx:3.2.0")
-    implementation("com.google.dagger:hilt-android:2.47")
-    kapt("com.google.dagger:hilt-android-compiler:2.47")
+    implementation("androidx.paging:paging-runtime-ktx:3.2.1")
+    implementation("com.google.dagger:hilt-android:2.48")
+    ksp("com.google.dagger:hilt-android-compiler:2.48")
     implementation("androidx.fragment:fragment-ktx:1.6.1")
     implementation("androidx.room:room-runtime:2.5.2")
     ksp("androidx.room:room-compiler:2.5.2")
