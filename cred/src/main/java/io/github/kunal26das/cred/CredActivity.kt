@@ -25,8 +25,8 @@ import io.github.kunal26das.cred.compose.CircularIconButton
 import io.github.kunal26das.cred.sheet.FirstSheet
 import io.github.kunal26das.cred.sheet.SecondSheet
 import io.github.kunal26das.cred.sheet.ThirdSheet
+import io.github.kunal26das.cred.stack.Stack
 import io.github.kunal26das.cred.theme.AssignmentTheme
-import io.github.kunal26das.stack.Stack
 
 class CredActivity : AppCompatActivity() {
 

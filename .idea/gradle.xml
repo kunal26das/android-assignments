@@ -13,6 +13,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/cred" />
+            <option value="$PROJECT_DIR$/cred/stack" />
             <option value="$PROJECT_DIR$/dependency" />
             <option value="$PROJECT_DIR$/epifi" />
             <option value="$PROJECT_DIR$/kisan-network" />
