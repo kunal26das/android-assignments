@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import io.github.kunal26das.common.Activity
+import io.github.kunal26das.cred.CredActivity
 import io.github.kunal26das.epifi.home.HomeActivity
 import io.github.kunal26das.kisan_network.home.KisanNetworkActivity
 import io.github.kunal26das.kutumb.SplashActivity
@@ -26,12 +27,16 @@ class MainActivity : Activity() {
     private val kutumb = registerForActivityResult(SplashActivity.Contract()) {}
     private val kisanNetwork = registerForActivityResult(KisanNetworkActivity.Contract()) {}
     private val radius = registerForActivityResult(FacilityListActivity.Contract()) {}
+    private val cred = registerForActivityResult(CredActivity.Contract()) {}
 
     @Composable
     override fun Content() {
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             content = {
+                Assignment("Cred") {
+                    cred.launch(null)
+                }
                 Assignment("Epifi") {
                     epifi.launch(null)
                 }

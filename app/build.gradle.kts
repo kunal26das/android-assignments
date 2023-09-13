@@ -70,6 +70,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("com.google.dagger:hilt-android:2.48")
     implementation("com.google.android.material:material:1.9.0")
+    implementation(project(mapOf("path" to ":cred")))
     ksp("com.google.dagger:hilt-android-compiler:2.48")
     implementation("androidx.startup:startup-runtime:1.1.1")
     implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
