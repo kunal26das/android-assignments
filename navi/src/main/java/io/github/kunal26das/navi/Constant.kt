@@ -1,7 +1,7 @@
 package io.github.kunal26das.navi
 
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.google.firebase.Firebase
+import com.google.firebase.remoteconfig.remoteConfig
 
 object Constant {
     const val KEY_REPO = "repo"

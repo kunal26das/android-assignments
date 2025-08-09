@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "io.github.kunal26das.dependency"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
@@ -30,6 +30,6 @@ android {
 
 dependencies {
     implementation(project(":radius:data"))
-    implementation("com.google.dagger:hilt-core:2.48")
-    ksp("com.google.dagger:hilt-android-compiler:2.48")
+    implementation("com.google.dagger:hilt-core:2.57")
+    ksp("com.google.dagger:hilt-android-compiler:2.57")
 }

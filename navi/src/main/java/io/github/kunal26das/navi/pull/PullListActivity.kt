@@ -7,10 +7,10 @@ import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
-import io.github.kunal26das.navi.Constant.KEY_REPO
-import io.github.kunal26das.navi.model.Repo
 import dagger.hilt.android.AndroidEntryPoint
+import io.github.kunal26das.navi.Constant.KEY_REPO
 import io.github.kunal26das.navi.R
+import io.github.kunal26das.navi.model.Repo
 
 @AndroidEntryPoint
 class PullListActivity : AppCompatActivity() {
@@ -38,8 +38,8 @@ class PullListActivity : AppCompatActivity() {
         }
     }
 
-    class Contract : ActivityResultContract<Repo, Boolean>() {
-        override fun createIntent(context: Context, input: Repo): Intent {
+    class Contract : ActivityResultContract<Repo?, Boolean>() {
+        override fun createIntent(context: Context, input: Repo?): Intent {
             return Intent(context, PullListActivity::class.java).apply {
                 putExtra(KEY_REPO, input)
             }

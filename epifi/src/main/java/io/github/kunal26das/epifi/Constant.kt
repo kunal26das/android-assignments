@@ -1,7 +1,7 @@
 package io.github.kunal26das.epifi
 
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.google.firebase.Firebase
+import com.google.firebase.remoteconfig.remoteConfig
 
 object Constant {
     const val BASE_URL = "http://www.omdbapi.com/"

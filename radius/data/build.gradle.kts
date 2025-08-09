@@ -11,8 +11,8 @@ java {
 
 dependencies {
     implementation(project(":radius:domain"))
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.google.code.gson:gson:2.10.1")
-    implementation("com.google.dagger:hilt-core:2.48")
-    ksp("com.google.dagger:hilt-android-compiler:2.48")
+    implementation("com.squareup.retrofit2:retrofit:3.0.0")
+    implementation("com.google.code.gson:gson:2.13.1")
+    implementation("com.google.dagger:hilt-core:2.57")
+    ksp("com.google.dagger:hilt-android-compiler:2.57")
 }

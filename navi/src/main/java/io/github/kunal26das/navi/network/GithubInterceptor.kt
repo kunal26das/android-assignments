@@ -1,8 +1,5 @@
 package io.github.kunal26das.navi.network
 
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.remoteconfig.ktx.get
-import com.google.firebase.remoteconfig.ktx.remoteConfig
 import io.github.kunal26das.navi.Constant
 import okhttp3.Interceptor
 import okhttp3.Response
