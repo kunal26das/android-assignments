@@ -30,6 +30,6 @@ android {
 
 dependencies {
     implementation(project(":radius:data"))
-    implementation("com.google.dagger:hilt-core:2.57")
-    ksp("com.google.dagger:hilt-android-compiler:2.57")
+    implementation(libs.hilt.core)
+    ksp(libs.hilt.android.compiler)
 }
