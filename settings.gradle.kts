@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Android Assignments"
+rootProject.name = "assignments"
 include(":app")
 include(":epifi")
 include(":kutumb")
