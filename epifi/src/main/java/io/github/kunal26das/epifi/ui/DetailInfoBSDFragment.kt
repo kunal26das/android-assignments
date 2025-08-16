@@ -6,17 +6,22 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
-import io.github.kunal26das.epifi.model.Element
-import io.github.kunal26das.epifi.model.Element.Companion.KEY_ELEMENT
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
+import io.github.kunal26das.epifi.model.Element
+import io.github.kunal26das.epifi.model.Element.Companion.KEY_ELEMENT
 
 @AndroidEntryPoint
 class DetailInfoBSDFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: DetailInfoBindingImpl
     private val viewModel by viewModels<DetailInfoViewModel>()
-    private val element by lazy { requireArguments().getParcelable<Element>(KEY_ELEMENT) }
+    private val element by lazy {
+        requireArguments().getParcelable(
+            KEY_ELEMENT,
+            Element::class.java
+        )
+    }
 
     init {
         arguments = Bundle()
