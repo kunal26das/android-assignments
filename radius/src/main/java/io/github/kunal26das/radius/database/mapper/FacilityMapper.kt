@@ -7,10 +7,11 @@ internal val Facility.toFacility: FacilityEntity
     get() = FacilityEntity(
         id = id,
         name = name,
-        options = options.map {
+    ).apply {
+        options = this@toFacility.options.map {
             it.toOption(id)
         }
-    )
+    }
 
 internal val FacilityEntity.toFacility: Facility
     get() = Facility(

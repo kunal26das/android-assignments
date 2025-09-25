@@ -12,5 +12,7 @@ internal data class FacilityEntity(
     var id: Int,
     @ColumnInfo("name")
     var name: String,
-    @Ignore val options: List<OptionEntity>,
-)
+) {
+    @Ignore
+    var options: List<OptionEntity> = emptyList()
+}
