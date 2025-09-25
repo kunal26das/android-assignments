@@ -3,7 +3,7 @@ package io.github.kunal26das.common
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import coil.load
+import coil3.load
 
 object ImageViewBindingAdapter {
 

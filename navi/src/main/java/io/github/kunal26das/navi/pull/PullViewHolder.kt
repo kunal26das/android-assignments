@@ -1,8 +1,9 @@
 package io.github.kunal26das.navi.pull
 
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
-import coil.transform.CircleCropTransformation
+import coil3.load
+import coil3.request.transformations
+import coil3.transform.CircleCropTransformation
 import io.github.kunal26das.navi.R
 import io.github.kunal26das.navi.databinding.ItemPullBinding
 import io.github.kunal26das.navi.model.Pull

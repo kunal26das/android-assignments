@@ -4,7 +4,7 @@ import android.graphics.Color
 import android.view.View.TEXT_ALIGNMENT_CENTER
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
-import coil.load
+import coil3.load
 import com.google.android.material.snackbar.Snackbar
 import io.github.kunal26das.common.OnItemClickListener
 import io.github.kunal26das.epifi.R
