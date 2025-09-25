@@ -15,12 +15,14 @@ import io.github.kunal26das.radius.database.entity.OptionEntity
         FacilityEntity::class,
         OptionEntity::class,
     ],
-    version = FeatureDatabase.VERSION
+    version = FeatureDatabase.VERSION,
+    exportSchema = false,
 )
 internal abstract class FeatureDatabase : RoomDatabase() {
     abstract val exclusionDao: ExclusionDao
     abstract val facilityDao: FacilityDao
     abstract val optionDao: OptionDao
+
     companion object {
         internal const val VERSION = 1
     }

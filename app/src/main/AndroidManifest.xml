@@ -26,9 +26,6 @@
             <meta-data
                 android:name="io.github.kunal26das.assignment.init.RemoteConfigInitializer"
                 android:value="androidx.startup" />
-            <meta-data
-                android:name="io.github.kunal26das.assignment.init.StethoInitializer"
-                android:value="androidx.startup" />
         </provider>
 
         <activity

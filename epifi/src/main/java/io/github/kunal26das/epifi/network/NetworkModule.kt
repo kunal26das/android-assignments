@@ -1,7 +1,5 @@
 package io.github.kunal26das.epifi.network
 
-import com.facebook.stetho.okhttp3.StethoInterceptor
-import io.github.kunal26das.epifi.service.OmdbService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -9,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import io.github.kunal26das.epifi.Constant
+import io.github.kunal26das.epifi.service.OmdbService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -30,9 +29,7 @@ object NetworkModule {
     @Provides
     @EpifiOkHttpClient
     fun getOkHttpClient(): OkHttpClient {
-        return OkHttpClient.Builder().apply {
-            addNetworkInterceptor(StethoInterceptor())
-        }.build()
+        return OkHttpClient.Builder().build()
     }
 
     @Provides

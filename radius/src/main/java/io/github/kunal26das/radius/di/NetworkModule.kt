@@ -1,6 +1,5 @@
 package io.github.kunal26das.radius.di
 
-import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -25,9 +24,7 @@ abstract class NetworkModule {
         @Provides
         @RadiusOkHttpClient
         fun providesOhHttpClient(): OkHttpClient {
-            return OkHttpClient.Builder().apply {
-                addNetworkInterceptor(StethoInterceptor())
-            }.build()
+            return OkHttpClient.Builder().build()
         }
 
         @Provides

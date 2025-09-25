@@ -13,21 +13,11 @@ android {
 
     defaultConfig {
         minSdk = 33
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
-        debug {
-            isMinifyEnabled = false
-        }
-    }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
     buildFeatures {
         buildConfig = true
@@ -39,7 +29,6 @@ dependencies {
     implementation(project(mapOf("path" to ":common")))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
     implementation(libs.androidx.paging.runtime.ktx)
     implementation(libs.coil)
     implementation(libs.hilt.android)
@@ -55,6 +44,6 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.androidx.fragment.ktx)
     implementation(platform(libs.firebase.bom))
-    implementation(libs.google.firebase.config)
-    implementation(libs.stetho.okhttp3)
+    implementation(libs.firebase.config)
+    implementation(libs.google.android.material)
 }

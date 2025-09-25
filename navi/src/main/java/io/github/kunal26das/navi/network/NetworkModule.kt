@@ -1,15 +1,14 @@
 package io.github.kunal26das.navi.network
 
-import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import io.github.kunal26das.navi.service.PullService
-import io.github.kunal26das.navi.service.RepoService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import io.github.kunal26das.navi.Constant
+import io.github.kunal26das.navi.service.PullService
+import io.github.kunal26das.navi.service.RepoService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -29,7 +28,6 @@ object NetworkModule {
     fun getOkHttpClient(): OkHttpClient {
         return OkHttpClient.Builder().apply {
             addInterceptor(GithubInterceptor())
-            addNetworkInterceptor(StethoInterceptor())
         }.build()
     }
 
