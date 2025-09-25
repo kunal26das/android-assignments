@@ -10,12 +10,12 @@ plugins {
 
 android {
     namespace = "io.github.kunal26das.assignment"
-    compileSdk = 36
+    compileSdk = libs.versions.compile.get().toInt()
 
     defaultConfig {
         applicationId = "io.github.kunal26das.assignment"
-        minSdk = 33
-        targetSdk = 36
+        minSdk = libs.versions.min.get().toInt()
+        targetSdk = libs.versions.target.get().toInt()
         versionCode = 1
         versionName = "1.0"
 

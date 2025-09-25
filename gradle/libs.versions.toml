@@ -25,6 +25,9 @@ retrofit = "3.0.0"
 room = "2.8.1"
 startup = "1.2.0"
 work = "2.10.5"
+compile = "36"
+target = "36"
+min = "33"
 
 [libraries]
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity" }

@@ -8,10 +8,10 @@ plugins {
 
 android {
     namespace = "io.github.kunal26das.radius"
-    compileSdk = 36
+    compileSdk = libs.versions.compile.get().toInt()
 
     defaultConfig {
-        minSdk = 33
+        minSdk = libs.versions.min.get().toInt()
     }
 
     compileOptions {
