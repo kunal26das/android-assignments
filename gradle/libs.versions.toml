@@ -28,7 +28,7 @@ roomRuntime = "2.8.1"
 startupRuntime = "1.2.0"
 stetho = "1.6.0"
 stethoOkhttp3 = "1.6.0"
-workRuntimeKtx = "2.10.4"
+workRuntimeKtx = "2.10.5"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
