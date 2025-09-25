@@ -3,7 +3,7 @@ package io.github.kunal26das.radius.entity
 import androidx.annotation.DrawableRes
 import io.github.kunal26das.radius.R
 
-sealed class Icon(@DrawableRes val drawableRes: Int) {
+sealed class Icon(@param:DrawableRes val drawableRes: Int) {
     object Apartment : Icon(R.drawable.apartment)
     object Boat : Icon(R.drawable.boat)
     object Condo : Icon(R.drawable.condo)

@@ -5,7 +5,6 @@ import android.app.Service
 import android.content.Intent
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import io.github.kunal26das.kutumb.Constant.CHANNEL_TIMER
 import io.github.kunal26das.kutumb.Constant.ID_NOTIFICATION
 import io.github.kunal26das.kutumb.Constant.KEY_TIME
@@ -13,9 +12,6 @@ import io.github.kunal26das.kutumb.Constant.KEY_TIME
 class CountDownService : Service() {
 
     private lateinit var timer: Timer
-    private val localBroadcastManager by lazy {
-        LocalBroadcastManager.getInstance(this)
-    }
 
     override fun onBind(p0: Intent?): IBinder? {
         return null
@@ -38,7 +34,7 @@ class CountDownService : Service() {
         super.onDestroy()
         val timerInfoIntent = Intent(KEY_TIME)
         timerInfoIntent.putExtra(KEY_TIME, 0)
-        localBroadcastManager.sendBroadcast(timerInfoIntent)
+        sendBroadcast(timerInfoIntent)
     }
 
     private fun getNotificationBuilder(): NotificationCompat.Builder {

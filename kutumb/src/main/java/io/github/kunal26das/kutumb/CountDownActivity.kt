@@ -7,7 +7,6 @@ import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import io.github.kunal26das.kutumb.Constant.KEY_TIME
 import io.github.kunal26das.kutumb.databinding.ActivityTimerBinding
 
@@ -15,7 +14,6 @@ class CountDownActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTimerBinding
     private val receiver by lazy { TimerReceiver() }
-    private val localBroadcastReceiver by lazy { LocalBroadcastManager.getInstance(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +22,7 @@ class CountDownActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        localBroadcastReceiver.registerReceiver(receiver, IntentFilter(KEY_TIME))
+        registerReceiver(receiver, IntentFilter(KEY_TIME))
         receiver.setOnTimeReceiveListener {
             binding.timer.text = Constant.parse(it)
             if (it == 0L) finish()
@@ -33,7 +31,7 @@ class CountDownActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        localBroadcastReceiver.unregisterReceiver(receiver)
+        unregisterReceiver(receiver)
     }
 
     class Contract : ActivityResultContract<Any?, Boolean>() {

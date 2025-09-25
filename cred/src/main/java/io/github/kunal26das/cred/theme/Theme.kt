@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
-import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsControllerCompat
 
 private val darkColorScheme = darkColorScheme(
     surface = Colors.Primary,
@@ -21,8 +21,10 @@ fun AssignmentTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
+            val insetsController = WindowInsetsControllerCompat(window, view)
+            insetsController.isAppearanceLightStatusBars = false
+            @Suppress("DEPRECATION")
             window.statusBarColor = Colors.StatusBar.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = false
         }
     }
     MaterialTheme(

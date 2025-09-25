@@ -8,7 +8,6 @@ import android.os.CountDownTimer
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import io.github.kunal26das.kutumb.Constant.ID_NOTIFICATION
 import io.github.kunal26das.kutumb.Constant.KEY_TIME
 
@@ -18,9 +17,6 @@ class Timer(
     private val builder: NotificationCompat.Builder
 ) : CountDownTimer(timeLong, 1000) {
 
-    private val localBroadcastReceiver by lazy {
-        LocalBroadcastManager.getInstance(context)
-    }
     private val notificationManager by lazy {
         NotificationManagerCompat.from(context)
     }
@@ -28,7 +24,7 @@ class Timer(
     override fun onTick(p0: Long) {
         val intent = Intent(KEY_TIME)
         intent.putExtra(KEY_TIME, p0)
-        localBroadcastReceiver.sendBroadcast(intent)
+        context.sendBroadcast(intent)
         builder.setContentText(Constant.parse(p0))
         if (ActivityCompat.checkSelfPermission(
                 context,
@@ -42,6 +38,6 @@ class Timer(
     override fun onFinish() {
         val intent = Intent(KEY_TIME)
         intent.putExtra(KEY_TIME, 0L)
-        localBroadcastReceiver.sendBroadcast(intent)
+        context.sendBroadcast(intent)
     }
 }

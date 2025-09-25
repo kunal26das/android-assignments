@@ -20,8 +20,8 @@ import javax.inject.Named
 @ActivityScoped
 class HomeBindingImpl @Inject constructor(
     @ActivityContext context: Context,
-    @Named(KEY_SEARCH_QUERY) val searchQuery: MutableLiveData<String>,
-    @Named(KEY_SEARCH_TYPE) val searchType: MutableLiveData<SearchType?>,
+    @param:Named(KEY_SEARCH_QUERY) val searchQuery: MutableLiveData<String>,
+    @param:Named(KEY_SEARCH_TYPE) val searchType: MutableLiveData<SearchType?>,
 ) : BindingImpl<ActivityHomeBinding>(
     LayoutInflater.from(context),
     R.layout.activity_home,
