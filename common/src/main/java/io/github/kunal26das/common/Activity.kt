@@ -1,6 +1,5 @@
 package io.github.kunal26das.common
 
-import android.os.Build
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
@@ -30,10 +29,9 @@ abstract class Activity : AppCompatActivity() {
         useDarkTheme: Boolean = isSystemInDarkTheme(),
         content: @Composable () -> Unit
     ) {
-        val dynamicColor = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
         val colors = when {
-            dynamicColor && useDarkTheme -> dynamicDarkColorScheme(LocalContext.current)
-            dynamicColor && !useDarkTheme -> dynamicLightColorScheme(LocalContext.current)
+            useDarkTheme -> dynamicDarkColorScheme(LocalContext.current)
+            !useDarkTheme -> dynamicLightColorScheme(LocalContext.current)
             else -> MaterialTheme.colorScheme
         }
         MaterialTheme(

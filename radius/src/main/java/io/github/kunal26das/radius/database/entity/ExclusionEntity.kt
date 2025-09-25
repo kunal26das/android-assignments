@@ -11,7 +11,7 @@ import androidx.room.Entity
         "option_id_2",
     ]
 )
-internal data class ExclusionEntity constructor(
+internal data class ExclusionEntity(
     @ColumnInfo("facility_id_1")
     val facilityId1: Int,
     @ColumnInfo("option_id_1")

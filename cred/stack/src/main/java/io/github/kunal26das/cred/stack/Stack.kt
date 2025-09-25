@@ -14,6 +14,7 @@ import androidx.compose.material3.SheetValue
 import androidx.compose.material3.rememberBottomSheetScaffoldState
 import androidx.compose.material3.rememberStandardBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import kotlinx.coroutines.launch
@@ -61,7 +62,9 @@ private fun Stack(sheets: List<Sheet>): State {
                 val modifier = Modifier
                     .fillMaxWidth()
                     .clickable(
-                        interactionSource = MutableInteractionSource(),
+                        interactionSource = remember {
+                            MutableInteractionSource()
+                        },
                         onClick = {
                             coroutineScope.launch {
                                 state.collapseAfter(index)

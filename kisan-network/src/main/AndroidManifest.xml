@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission
+        android:name="android.permission.SEND_SMS"
+        tools:ignore="SmsAndCallLogPolicy" />
 
     <application>
         <activity
             android:name=".home.KisanNetworkActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Material3.DayNight" />
+            android:theme="@style/Theme.Material3.DayNight"
+            tools:ignore="DiscouragedApi" />
 
         <activity
             android:name=".message.compose.NewMessageActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Material3.DayNight" />
+            android:theme="@style/Theme.Material3.DayNight"
+            tools:ignore="DiscouragedApi" />
     </application>
 </manifest>

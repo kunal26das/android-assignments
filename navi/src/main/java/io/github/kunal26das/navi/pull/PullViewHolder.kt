@@ -31,7 +31,7 @@ class PullViewHolder(
     private fun formatDate(date: String?): String? {
         return try {
             customDateFormat.format(githubDateFormat.parse(date))
-        } catch (e: ParseException) {
+        } catch (_: ParseException) {
             date
         }
     }

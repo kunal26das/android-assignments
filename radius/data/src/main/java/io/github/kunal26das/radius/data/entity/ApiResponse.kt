@@ -2,7 +2,7 @@ package io.github.kunal26das.radius.data.entity
 
 import com.google.gson.annotations.SerializedName
 
-data class ApiResponse constructor(
+data class ApiResponse(
     @SerializedName("facilities")
     val facilities: List<FacilityDto>? = null,
     @SerializedName("exclusions")

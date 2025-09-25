@@ -10,8 +10,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.PermissionChecker.PERMISSION_GRANTED
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import io.github.kunal26das.kisan_network.contact.Contact
 import dagger.hilt.android.qualifiers.ApplicationContext
+import io.github.kunal26das.kisan_network.contact.Contact
 import java.io.Closeable
 
 class ContactListPagingSource(
@@ -44,7 +44,7 @@ class ContactListPagingSource(
     private val countryCode
         get() = try {
             number.split(phoneNumber)[0]
-        } catch (e: Throwable) {
+        } catch (_: Throwable) {
             ""
         }
 

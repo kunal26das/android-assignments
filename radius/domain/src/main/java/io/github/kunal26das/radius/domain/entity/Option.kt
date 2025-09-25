@@ -1,6 +1,6 @@
 package io.github.kunal26das.radius.domain.entity
 
-data class Option constructor(
+data class Option(
     val id: Int,
     val name: String = "",
     val icon: String = "",

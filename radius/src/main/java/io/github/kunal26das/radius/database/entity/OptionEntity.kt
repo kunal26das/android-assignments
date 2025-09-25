@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-internal data class OptionEntity constructor(
+internal data class OptionEntity(
     @PrimaryKey
     @ColumnInfo("id")
     var id: Int,
@@ -15,6 +15,4 @@ internal data class OptionEntity constructor(
     var icon: String,
     @ColumnInfo("facility_id")
     var facilityId: Int,
-) {
-    constructor() : this(0, "", "", 0)
-}
+)

@@ -22,7 +22,7 @@ class CountDownActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        registerReceiver(receiver, IntentFilter(KEY_TIME))
+        registerReceiver(receiver, IntentFilter(KEY_TIME), RECEIVER_NOT_EXPORTED)
         receiver.setOnTimeReceiveListener {
             binding.timer.text = Constant.parse(it)
             if (it == 0L) finish()

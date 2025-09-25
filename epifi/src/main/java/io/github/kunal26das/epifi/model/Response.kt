@@ -14,11 +14,4 @@ data class Response(
 
     @SerializedName("Response")
     private val _response: String? = null,
-) : Parcelable {
-
-    val totalResults
-        get() = _totalResults?.toIntOrNull()
-
-    val response
-        get() = _response?.toBoolean()
-}
+) : Parcelable

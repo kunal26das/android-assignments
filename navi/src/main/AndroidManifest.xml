@@ -11,7 +11,7 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Material3.DayNight"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
 
         <activity
             android:name=".pull.PullListActivity"
@@ -19,6 +19,6 @@
             android:label="@string/closed_pulls"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Material3.DayNight"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
     </application>
 </manifest>

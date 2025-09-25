@@ -23,7 +23,7 @@ class NewMessageActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewMessageBinding
     private val viewModel by viewModels<NewMessageViewModel>()
 
-    private val otp = String.format("%06d", Random.nextInt(999999))
+    private val otp = Random.nextInt(999999).toString()
     private val message get() = binding.textInputLayout.editText?.text?.toString()
     private val contact by lazy { intent.getParcelableExtra(KEY_CONTACT, Contact::class.java) }
 

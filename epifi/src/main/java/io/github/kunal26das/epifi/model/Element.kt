@@ -10,9 +10,7 @@ import kotlinx.parcelize.Parcelize
 
 @Entity
 @Parcelize
-data class Element constructor(
-    /** Basic Info **/
-
+data class Element(
     @PrimaryKey
     @SerializedName("imdbID")
     var imdbId: String,
@@ -131,26 +129,23 @@ data class Element constructor(
     val cast
         get() = try {
             actors.split(",").joinToString("\n") { it.trim() }
-        } catch (e: Throwable) {
+        } catch (_: Throwable) {
             actors
         }
 
     val searchType
         get() = try {
             SearchType.valueOf(_searchType)
-        } catch (e: Throwable) {
+        } catch (_: Throwable) {
             null
         }
 
     val randomRating
         get() = try {
             ratings.random()
-        } catch (e: Throwable) {
+        } catch (_: Throwable) {
             null
         }
-
-    val response
-        get() = _response.toBoolean()
 
     class DIffCallback : DiffUtil.ItemCallback<Element>() {
         override fun areItemsTheSame(oldItem: Element, newItem: Element): Boolean {

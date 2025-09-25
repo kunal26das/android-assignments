@@ -1,6 +1,6 @@
 package io.github.kunal26das.radius.domain.entity
 
-data class Facility constructor(
+data class Facility(
     val id: Int,
     val name: String = "",
     val options: List<Option> = emptyList(),

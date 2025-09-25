@@ -2,7 +2,7 @@ package io.github.kunal26das.radius.data.entity
 
 import com.google.gson.annotations.SerializedName
 
-data class OptionDto constructor(
+data class OptionDto(
     @SerializedName("name")
     val name: String? = null,
     @SerializedName("icon")

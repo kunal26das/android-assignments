@@ -4,13 +4,13 @@ import androidx.activity.OnBackPressedCallback
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.SheetState
 import androidx.compose.material3.SheetValue
-import androidx.compose.ui.Modifier
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+@ConsistentCopyVisibility
 @OptIn(ExperimentalMaterial3Api::class)
 data class State internal constructor(
     internal val sheets: List<Sheet>,

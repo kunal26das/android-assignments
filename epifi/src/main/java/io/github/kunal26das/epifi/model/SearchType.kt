@@ -7,7 +7,7 @@ enum class SearchType {
     companion object {
         operator fun get(searchType: String?) = try {
             valueOf(searchType!!)
-        } catch (e: Throwable) {
+        } catch (_: Throwable) {
             null
         }
     }

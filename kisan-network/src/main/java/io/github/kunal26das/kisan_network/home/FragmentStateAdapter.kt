@@ -9,7 +9,7 @@ class FragmentStateAdapter(
     fragmentActivity: FragmentActivity
 ) : FragmentStateAdapter(fragmentActivity) {
 
-    private val tabs = Tab.values()
+    private val tabs = Tab.entries
 
     override fun getItemCount() = tabs.size
 
