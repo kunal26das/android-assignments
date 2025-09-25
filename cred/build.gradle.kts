@@ -22,7 +22,7 @@ android {
 }
 
 dependencies {
-    implementation(project(mapOf("path" to ":cred:stack")))
+    implementation(project(":cred:stack"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.lifecycle.runtime.ktx)

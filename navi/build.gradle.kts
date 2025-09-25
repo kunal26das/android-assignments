@@ -26,7 +26,7 @@ android {
 }
 
 dependencies {
-    implementation(project(mapOf("path" to ":common")))
+    implementation(project(":common"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.gson)

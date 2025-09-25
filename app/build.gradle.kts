@@ -36,14 +36,14 @@ android {
 }
 
 dependencies {
-    implementation(project(mapOf("path" to ":common")))
-    implementation(project(mapOf("path" to ":dependency")))
-    implementation(project(mapOf("path" to ":navi")))
-    implementation(project(mapOf("path" to ":epifi")))
-    implementation(project(mapOf("path" to ":kutumb")))
-    implementation(project(mapOf("path" to ":kisan-network")))
-    implementation(project(mapOf("path" to ":radius")))
-    implementation(project(mapOf("path" to ":cred")))
+    implementation(project(":common"))
+    implementation(project(":dependency"))
+    implementation(project(":navi"))
+    implementation(project(":epifi"))
+    implementation(project(":kutumb"))
+    implementation(project(":kisan-network"))
+    implementation(project(":radius"))
+    implementation(project(":cred"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.lifecycle.runtime.ktx)

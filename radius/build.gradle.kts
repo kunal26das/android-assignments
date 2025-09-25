@@ -24,8 +24,8 @@ android {
 }
 
 dependencies {
-    implementation(project(mapOf("path" to ":common")))
-    implementation(project(mapOf("path" to ":radius:domain")))
+    implementation(project(":common"))
+    implementation(project(":radius:domain"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.startup.runtime)
