@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.ksp)
 }
 
 android {
@@ -19,7 +19,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":radius:data"))
     implementation(libs.hilt.core)
+    implementation(project(":radius:data"))
     ksp(libs.hilt.android.compiler)
 }

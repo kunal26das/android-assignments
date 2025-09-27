@@ -1,9 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.hilt.android)
-    alias(libs.plugins.kotlin.ksp)
-    alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlin.ksp)
 }
 
 android {
@@ -25,24 +25,24 @@ android {
 }
 
 dependencies {
-    implementation(project(":common"))
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.paging.runtime.ktx)
-    implementation(libs.coil)
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.android.compiler)
     implementation(libs.androidx.activity.ktx)
-    implementation(libs.androidx.room.runtime)
-    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.paging.runtime.ktx)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.paging)
-    implementation(libs.gson)
-    implementation(libs.okhttp)
-    implementation(libs.retrofit)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.coil)
     implementation(libs.converter.gson)
-    implementation(libs.androidx.fragment.ktx)
-    implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.config)
     implementation(libs.google.android.material)
+    implementation(libs.gson)
+    implementation(libs.hilt.android)
+    implementation(libs.okhttp)
+    implementation(libs.retrofit)
+    implementation(platform(libs.firebase.bom))
+    implementation(project(":common"))
+    kapt(libs.hilt.android.compiler)
+    ksp(libs.androidx.room.compiler)
 }

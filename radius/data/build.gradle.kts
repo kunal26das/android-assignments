@@ -1,7 +1,7 @@
 plugins {
-    id("java-library")
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kotlin.ksp)
+    id("java-library")
 }
 
 java {
@@ -10,9 +10,9 @@ java {
 }
 
 dependencies {
-    implementation(project(":radius:domain"))
-    implementation(libs.retrofit)
     implementation(libs.gson)
     implementation(libs.hilt.core)
+    implementation(libs.retrofit)
+    implementation(project(":radius:domain"))
     ksp(libs.hilt.android.compiler)
 }

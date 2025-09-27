@@ -1,9 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.hilt.android)
-    alias(libs.plugins.kotlin.ksp)
-    alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlin.ksp)
 }
 
 android {
@@ -24,15 +24,15 @@ android {
 }
 
 dependencies {
-    implementation(project(":common"))
-    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.paging.runtime.ktx)
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
+    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.fragment.ktx)
-    implementation(libs.androidx.room.runtime)
-    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.paging.runtime.ktx)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
     implementation(libs.google.android.material)
+    implementation(libs.hilt.android)
+    implementation(project(":common"))
+    ksp(libs.androidx.room.compiler)
+    ksp(libs.hilt.android.compiler)
 }

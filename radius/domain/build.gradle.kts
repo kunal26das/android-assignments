@@ -1,7 +1,7 @@
 plugins {
-    id("java-library")
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.kotlin.jvm)
+    id("java-library")
 }
 
 java {
