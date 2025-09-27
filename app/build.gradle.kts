@@ -54,7 +54,6 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(project(":common"))
     implementation(project(":cred"))
-    implementation(project(":dependency"))
     implementation(project(":epifi"))
     implementation(project(":kisan-network"))
     implementation(project(":kutumb"))

@@ -19,3 +19,4 @@ local.properties
 /.vscode/settings.json
 /radius/data/bin/
 /radius/domain/bin/
+/buildSrc/build/
