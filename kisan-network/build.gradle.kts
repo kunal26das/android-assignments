@@ -25,10 +25,10 @@ android {
 
 dependencies {
     implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.fragment.ktx)
-    implementation(libs.androidx.paging.runtime.ktx)
-    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.core)
+    implementation(libs.androidx.fragment)
+    implementation(libs.androidx.paging.runtime)
+    implementation(libs.androidx.room)
     implementation(libs.androidx.room.runtime)
     implementation(libs.google.android.material)
     implementation(libs.hilt.android)

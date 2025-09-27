@@ -25,10 +25,10 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.activity)
     implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.paging.runtime.ktx)
+    implementation(libs.androidx.core)
+    implementation(libs.androidx.paging.runtime)
     implementation(libs.coil)
     implementation(libs.converter.gson)
     implementation(libs.firebase.config)
