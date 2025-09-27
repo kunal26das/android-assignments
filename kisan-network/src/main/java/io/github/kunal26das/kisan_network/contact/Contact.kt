@@ -1,14 +1,12 @@
 package io.github.kunal26das.kisan_network.contact
 
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
+import java.io.Serializable
 
-@Parcelize
 data class Contact(
     val displayName: String,
     val phoneNumber: String,
     val countryCode: String,
-) : Parcelable {
+) : Serializable {
 
     val number
         get() = "${countryCode}${phoneNumber}"

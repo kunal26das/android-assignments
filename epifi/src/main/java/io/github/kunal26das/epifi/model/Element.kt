@@ -1,15 +1,13 @@
 package io.github.kunal26das.epifi.model
 
-import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
 import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import kotlinx.parcelize.Parcelize
+import java.io.Serializable
 
 @Entity
-@Parcelize
 data class Element(
     @PrimaryKey
     @SerializedName("imdbID")
@@ -95,7 +93,7 @@ data class Element(
 
     @SerializedName("bookmarked")
     var isBookmarked: Boolean,
-) : Parcelable {
+) : Serializable {
 
     constructor() : this(
         imdbId = "",

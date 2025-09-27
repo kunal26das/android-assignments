@@ -16,7 +16,7 @@ import io.github.kunal26das.navi.model.Repo
 class PullListActivity : AppCompatActivity() {
 
     private val viewModel by viewModels<PullListViewModel>()
-    private val repo by lazy { intent.getParcelableExtra(KEY_REPO, Repo::class.java) }
+    private val repo by lazy { intent.getSerializableExtra(KEY_REPO, Repo::class.java) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

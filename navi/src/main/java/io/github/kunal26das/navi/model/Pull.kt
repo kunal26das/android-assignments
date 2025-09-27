@@ -1,11 +1,10 @@
 package io.github.kunal26das.navi.model
 
-import android.os.Parcelable
+
 import androidx.recyclerview.widget.DiffUtil
 import com.google.gson.annotations.SerializedName
-import kotlinx.parcelize.Parcelize
 
-@Parcelize
+
 data class Pull(
     @SerializedName("id")
     val id: Long? = null,
@@ -21,7 +20,7 @@ data class Pull(
 
     @SerializedName("user")
     val user: User? = null,
-) : Parcelable {
+) {
 
     class DiffCallback : DiffUtil.ItemCallback<Pull>() {
         override fun areItemsTheSame(oldItem: Pull, newItem: Pull): Boolean {

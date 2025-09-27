@@ -1,10 +1,9 @@
 package io.github.kunal26das.epifi.model
 
-import android.os.Parcelable
-import com.google.gson.annotations.SerializedName
-import kotlinx.parcelize.Parcelize
 
-@Parcelize
+import com.google.gson.annotations.SerializedName
+
+
 data class Response(
     @SerializedName("Search")
     val search: List<Element>? = null,
@@ -14,4 +13,4 @@ data class Response(
 
     @SerializedName("Response")
     private val _response: String? = null,
-) : Parcelable
+)

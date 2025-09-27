@@ -25,7 +25,7 @@ class NewMessageActivity : AppCompatActivity() {
 
     private val otp = Random.nextInt(999999).toString()
     private val message get() = binding.textInputLayout.editText?.text?.toString()
-    private val contact by lazy { intent.getParcelableExtra(KEY_CONTACT, Contact::class.java) }
+    private val contact by lazy { intent.getSerializableExtra(KEY_CONTACT, Contact::class.java) }
 
     private val requestSendSmsPermission =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) {

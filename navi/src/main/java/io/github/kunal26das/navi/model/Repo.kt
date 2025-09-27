@@ -1,11 +1,9 @@
 package io.github.kunal26das.navi.model
 
-import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
 import com.google.gson.annotations.SerializedName
-import kotlinx.parcelize.Parcelize
+import java.io.Serializable
 
-@Parcelize
 data class Repo(
     @SerializedName("id")
     val id: Long? = null,
@@ -18,7 +16,7 @@ data class Repo(
 
     @SerializedName("created_at")
     val createdAt: String? = null,
-) : Parcelable {
+) : Serializable {
 
     class DiffCallback : DiffUtil.ItemCallback<Repo>() {
         override fun areItemsTheSame(oldItem: Repo, newItem: Repo): Boolean {

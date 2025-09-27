@@ -17,7 +17,7 @@ class DetailInfoBSDFragment : BottomSheetDialogFragment() {
     private lateinit var binding: DetailInfoBindingImpl
     private val viewModel by viewModels<DetailInfoViewModel>()
     private val element by lazy {
-        requireArguments().getParcelable(
+        requireArguments().getSerializable(
             KEY_ELEMENT,
             Element::class.java
         )
@@ -59,7 +59,7 @@ class DetailInfoBSDFragment : BottomSheetDialogFragment() {
     }
 
     fun setElement(element: Element?): DetailInfoBSDFragment {
-        requireArguments().putParcelable(KEY_ELEMENT, element)
+        requireArguments().putSerializable(KEY_ELEMENT, element)
         return this
     }
 
