@@ -18,6 +18,7 @@ android {
         sourceCompatibility = CompileOptions.Java
         targetCompatibility = CompileOptions.Java
     }
+
     buildFeatures {
         compose = true
     }

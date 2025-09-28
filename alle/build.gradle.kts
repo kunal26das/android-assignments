@@ -1,20 +1,18 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.hilt.android)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.ksp)
 }
 
 android {
-    namespace = "io.github.kunal26das.geektrust"
+    namespace = "io.github.kunal26das.alle"
     compileSdk = libs.versions.compile.get().toInt()
 
     defaultConfig {
-        applicationId = "io.github.kunal26das.geektrust"
+        applicationId = "io.github.kunal26das.alle"
         minSdk = libs.versions.min.get().toInt()
         targetSdk = libs.versions.target.get().toInt()
-        buildConfigField("String", "BASE_URL", "\"https://findfalcone.geektrust.com\"")
     }
 
     compileOptions {
@@ -24,28 +22,28 @@ android {
 
     buildFeatures {
         compose = true
-        buildConfig = true
     }
 }
 
 dependencies {
     implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.core)
-    implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.paging.compose)
+    implementation(libs.androidx.paging.runtime)
+    implementation(libs.androidx.room.paging)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.work.runtime)
+    implementation(libs.coil)
     implementation(libs.google.android.material)
-    implementation(libs.hilt.android)
-    implementation(libs.retrofit.gson)
-    implementation(libs.retrofit.result)
-    implementation(libs.retrofit)
+    implementation(libs.kotlinx.coroutines.play.services)
+    implementation(libs.text.recognition)
     implementation(platform(libs.androidx.compose.bom))
-    implementation(project(":geektrust:data"))
-    implementation(project(":geektrust:domain"))
-    ksp(libs.hilt.android.compiler)
+    ksp(libs.androidx.room.compiler)
 }

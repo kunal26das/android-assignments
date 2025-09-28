@@ -14,5 +14,5 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.retrofit)
     implementation(libs.hilt.core)
-    ksp(libs.hilt.compiler)
+    ksp(libs.hilt.android.compiler)
 }
