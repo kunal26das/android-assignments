@@ -33,5 +33,6 @@ dependencies {
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle.runtime)
     implementation(platform(libs.androidx.compose.bom))
+    implementation(project(":common"))
     implementation(project(":cred:stack"))
 }

@@ -45,5 +45,6 @@ dependencies {
     implementation(libs.kotlinx.coroutines.play.services)
     implementation(libs.text.recognition)
     implementation(platform(libs.androidx.compose.bom))
+    implementation(project(":common"))
     ksp(libs.androidx.room.compiler)
 }

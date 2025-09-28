@@ -26,4 +26,5 @@ dependencies {
     implementation(libs.androidx.core)
     implementation(libs.androidx.localbroadcastmanager)
     implementation(libs.google.android.material)
+    implementation(project(":common"))
 }

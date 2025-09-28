@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.retrofit.result)
     implementation(libs.retrofit)
     implementation(platform(libs.androidx.compose.bom))
+    implementation(project(":common"))
     implementation(project(":geektrust:data"))
     implementation(project(":geektrust:domain"))
     ksp(libs.hilt.android.compiler)
