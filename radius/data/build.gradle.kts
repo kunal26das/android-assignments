@@ -5,8 +5,8 @@ plugins {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = CompileOptions.Java
+    targetCompatibility = CompileOptions.Java
 }
 
 dependencies {

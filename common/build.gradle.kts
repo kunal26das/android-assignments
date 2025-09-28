@@ -14,8 +14,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = CompileOptions.Java
+        targetCompatibility = CompileOptions.Java
     }
     buildFeatures {
         compose = true

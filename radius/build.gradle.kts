@@ -15,8 +15,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = CompileOptions.Java
+        targetCompatibility = CompileOptions.Java
     }
     buildFeatures {
         compose = true
@@ -45,6 +45,7 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(project(":common"))
     implementation(project(":radius:domain"))
+    implementation(project(":radius:data"))
     ksp(libs.androidx.room.compiler)
     ksp(libs.hilt.android.compiler)
 }

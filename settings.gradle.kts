@@ -7,7 +7,6 @@ pluginManagement {
 }
 
 rootProject.name = "assignments"
-include(":app")
 include(":common")
 include(":cred:stack")
 include(":cred")
