@@ -30,7 +30,7 @@ room = "2.8.3"
 startup = "1.2.0"
 target = "36"
 text-recognition = "16.0.1"
-work = "2.10.5"
+work = "2.11.0"
 
 [libraries]
 androidx-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
