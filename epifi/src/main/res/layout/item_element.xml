@@ -5,6 +5,7 @@
 
     <data>
 
+        <import type="android.view.View" />
         <variable
             name="element"
             type="io.github.kunal26das.epifi.model.Element" />
@@ -56,7 +57,22 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:padding="8dp"
-                    app:srcCompat="@{element.bookmarked ? @drawable/ic_bookmark_filled : @drawable/ic_bookmark_outlined}" />
+                    android:src="@drawable/ic_bookmark_outlined"
+                    android:visibility="@{element.bookmarked ? View.GONE : View.VISIBLE}"
+                    tools:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/bookmark_filled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top|end"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:visibility="@{element.bookmarked ? View.VISIBLE : View.GONE}"
+                    app:srcCompat="@drawable/ic_bookmark_filled"
+                    tools:visibility="gone" />
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
         </com.google.android.material.card.MaterialCardView>
 

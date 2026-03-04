@@ -1,6 +1,7 @@
 package io.github.kunal26das.epifi.home
 
 import android.graphics.Color
+import android.view.View
 import android.view.View.TEXT_ALIGNMENT_CENTER
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
@@ -27,13 +28,15 @@ class ElementViewHolder(
         if (element == null) return this
         binding.element = element
         binding.poster.load(element.poster)
-        binding.bookmark.setOnClickListener {
+        val bookmarkClickListener = View.OnClickListener {
             binding.element = element.also {
                 it.isBookmarked = !it.isBookmarked
                 viewModel.manageElement(element)
                 if (it.isBookmarked) snackBar(element)
             }
         }
+        binding.bookmark.setOnClickListener(bookmarkClickListener)
+        binding.bookmarkFilled.setOnClickListener(bookmarkClickListener)
         binding.poster.setOnClickListener {
             onElementClickListener?.invoke(element)
         }

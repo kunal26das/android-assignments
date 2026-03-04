@@ -1,8 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.hilt.android)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.kotlin.ksp)
 }
 
@@ -43,6 +41,6 @@ dependencies {
     implementation(libs.retrofit.gson)
     implementation(platform(libs.firebase.bom))
     implementation(project(":common"))
-    kapt(libs.hilt.android.compiler)
+    ksp(libs.hilt.android.compiler)
     ksp(libs.androidx.room.compiler)
 }

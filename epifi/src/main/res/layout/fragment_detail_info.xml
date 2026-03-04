@@ -5,6 +5,7 @@
 
     <data>
 
+        <import type="android.view.View" />
         <variable
             name="element"
             type="io.github.kunal26das.epifi.model.Element" />
@@ -37,7 +38,7 @@
                     android:textColor="#333333"
                     android:textSize="18sp"
                     app:fontFamily="@font/gilroy_bold"
-                    app:visible="@{element.title != null}"
+                    android:visibility="@{element.title != null ? View.VISIBLE : View.GONE}"
                     tools:text="Title" />
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -81,7 +82,7 @@
                     android:textColor="#282828"
                     android:textSize="24sp"
                     app:fontFamily="@font/gilroy_bold"
-                    app:visible="@{element.title != null}"
+                    android:visibility="@{element.title != null ? View.VISIBLE : View.GONE}"
                     tools:text="Title" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -94,7 +95,7 @@
                     android:textColor="#333333"
                     android:textSize="16sp"
                     app:fontFamily="@font/inter_regular"
-                    app:visible="@{element.runtime != null &amp;&amp; element.rated != null}"
+                    android:visibility="@{element.runtime != null &amp;&amp; element.rated != null ? View.VISIBLE : View.GONE}"
                     tools:text="Runtime | Rated" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -107,7 +108,7 @@
                     android:textColor="#333333"
                     android:textSize="16sp"
                     app:fontFamily="@font/inter_regular"
-                    app:visible="@{element.genre != null}"
+                    android:visibility="@{element.genre != null ? View.VISIBLE : View.GONE}"
                     tools:text="Genres" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -130,7 +131,7 @@
                     android:textColor="#333333"
                     android:textSize="18sp"
                     app:fontFamily="@font/gilroy_semi_bold"
-                    app:visible="@{element.plot != null}" />
+                    android:visibility="@{element.plot != null ? View.VISIBLE : View.GONE}" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
@@ -141,7 +142,7 @@
                     android:textColor="#333333"
                     android:textSize="14sp"
                     app:fontFamily="@font/inter_regular"
-                    app:visible="@{element.plot != null}"
+                    android:visibility="@{element.plot != null ? View.VISIBLE : View.GONE}"
                     tools:text="Plot" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -153,7 +154,7 @@
                     android:textColor="#333333"
                     android:textSize="18sp"
                     app:fontFamily="@font/gilroy_semi_bold"
-                    app:visible="@{element.cast != null}" />
+                    android:visibility="@{element.cast != null ? View.VISIBLE : View.GONE}" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
@@ -164,7 +165,7 @@
                     android:textColor="#333333"
                     android:textSize="14sp"
                     app:fontFamily="@font/inter_regular"
-                    app:visible="@{element.cast != null}"
+                    android:visibility="@{element.cast != null ? View.VISIBLE : View.GONE}"
                     tools:text="Actors" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>
