@@ -2,6 +2,7 @@ package io.github.kunal26das.cred.stack
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -15,8 +16,8 @@ open class Sheet(
 ) {
     @Composable
     internal fun height(index: Int): Dp {
-        val configuration = LocalWindowInfo.current
-        val screenHeight = configuration.containerSize.height.dp
+        val containerHeightPx = LocalWindowInfo.current.containerSize.height
+        val screenHeight = with(LocalDensity.current) { containerHeightPx.toDp() }
         return screenHeight - peekHeight * (index + 1)
     }
 }

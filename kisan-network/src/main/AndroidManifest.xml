@@ -7,12 +7,14 @@
         android:name="android.permission.SEND_SMS"
         tools:ignore="SmsAndCallLogPolicy" />
 
-    <application>
+    <application
+        android:name=".Application"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Kisan">
         <activity
             android:name=".home.KisanNetworkActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Material3.DayNight"
             tools:ignore="DiscouragedApi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +26,6 @@
             android:name=".message.compose.NewMessageActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Material3.DayNight"
             tools:ignore="DiscouragedApi" />
     </application>
 </manifest>

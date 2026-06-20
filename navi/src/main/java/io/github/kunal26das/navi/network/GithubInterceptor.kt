@@ -7,7 +7,10 @@ import okhttp3.Response
 class GithubInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         return chain.proceed(chain.request().newBuilder().apply {
-            addHeader("Authorization", "Bearer ${Constant.token}")
+            val token = Constant.token
+            if (token.isNotBlank()) {
+                addHeader("Authorization", "Bearer $token")
+            }
             addHeader("Accept", "application/vnd.github+json")
         }.build())
     }

@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import androidx.paging.liveData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
@@ -25,7 +24,7 @@ class ContactListViewModel @Inject constructor(
         pagingSourceFactory = {
             ContactListPagingSource(applicationContext)
         }
-    ).liveData.cachedIn(viewModelScope)
+    ).flow.cachedIn(viewModelScope)
 
     companion object {
         private const val PAGE_SIZE = 10

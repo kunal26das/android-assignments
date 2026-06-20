@@ -17,7 +17,6 @@ android {
     }
     buildFeatures {
         compose = true
-        dataBinding = true
     }
 }
 
@@ -29,8 +28,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.core)
-    implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.startup.runtime)
-    implementation(libs.coil)
+    implementation(libs.google.android.material)
     implementation(platform(libs.androidx.compose.bom))
 }

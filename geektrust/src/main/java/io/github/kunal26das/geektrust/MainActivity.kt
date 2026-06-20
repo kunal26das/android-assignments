@@ -2,13 +2,16 @@ package io.github.kunal26das.geektrust
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.pullrefresh.PullRefreshIndicator
@@ -42,9 +45,8 @@ class MainActivity : AppCompatActivity() {
     private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
-        supportActionBar?.setTitle(R.string.find_falcone)
-        supportActionBar?.setSubtitle(R.string.select_planets_you_want_to_search_in)
         setContent {
             MaterialTheme(
                 colorScheme = when {
@@ -97,9 +99,21 @@ class MainActivity : AppCompatActivity() {
         val selection = remember { viewModel.selection }
         val searchLimit by viewModel.searchLimit.collectAsState()
         LazyColumn(
-            modifier = modifier,
+            modifier = modifier.safeDrawingPadding(),
             horizontalAlignment = Alignment.CenterHorizontally,
             content = {
+                item {
+                    Column(modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)) {
+                        Text(
+                            text = stringResource(R.string.find_falcone),
+                            style = MaterialTheme.typography.headlineSmall,
+                        )
+                        Text(
+                            text = stringResource(R.string.select_planets_you_want_to_search_in),
+                            style = MaterialTheme.typography.bodyMedium,
+                        )
+                    }
+                }
                 if (result == Result.Unknown) {
                     items(searchLimit) { index ->
                         PlanetVehiclePicker(

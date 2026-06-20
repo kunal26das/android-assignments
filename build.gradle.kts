@@ -9,10 +9,17 @@ plugins {
     alias(libs.plugins.kotlin.ksp).apply(false)
 }
 
+val kotlinVersion = libs.versions.kotlin.get()
+
 allprojects {
     repositories {
         google()
         mavenCentral()
         gradlePluginPortal()
+    }
+    configurations.all {
+        resolutionStrategy {
+            force("org.jetbrains.kotlin:kotlin-metadata-jvm:$kotlinVersion")
+        }
     }
 }

@@ -3,28 +3,61 @@ package io.github.kunal26das.kutumb
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContract
-import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import io.github.kunal26das.common.Activity
 import io.github.kunal26das.kutumb.Constant.KEY_TIME
-import io.github.kunal26das.kutumb.databinding.ActivityTimerBinding
 
-class CountDownActivity : AppCompatActivity() {
+class CountDownActivity : Activity() {
 
-    private lateinit var binding: ActivityTimerBinding
     private val receiver by lazy { TimerReceiver() }
+    private var timer by mutableStateOf("")
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_timer)
+    @Composable
+    override fun Content() {
+        Column(modifier = Modifier
+            .fillMaxSize()
+            .padding(8.dp)) {
+            Text(
+                text = stringResource(R.string.remaining_focus_time),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp),
+                textAlign = TextAlign.Center,
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold,
+            )
+            Text(
+                text = timer,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp),
+                textAlign = TextAlign.Center,
+                fontSize = 32.sp,
+                fontWeight = FontWeight.Bold,
+            )
+        }
     }
 
     override fun onResume() {
         super.onResume()
         registerReceiver(receiver, IntentFilter(KEY_TIME), RECEIVER_NOT_EXPORTED)
         receiver.setOnTimeReceiveListener {
-            binding.timer.text = Constant.parse(it)
+            timer = Constant.parse(it)
             if (it == 0L) finish()
         }
     }
@@ -43,5 +76,4 @@ class CountDownActivity : AppCompatActivity() {
             return resultCode == RESULT_OK
         }
     }
-
 }

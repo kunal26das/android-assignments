@@ -44,7 +44,7 @@ class CountDownService : Service() {
             notificationIntent, PendingIntent.FLAG_IMMUTABLE
         )
         return NotificationCompat.Builder(this, CHANNEL_TIMER)
-//            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
             .setContentText("Counter Down Service")
             .setContentIntent(pendingIntent)
     }

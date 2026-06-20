@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
@@ -15,14 +16,19 @@ android {
         targetCompatibility = CompileOptions.Java
     }
     buildFeatures {
-        dataBinding = true
+        compose = true
     }
 }
 
 dependencies {
+    implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core)
     implementation(libs.androidx.localbroadcastmanager)
     implementation(libs.google.android.material)
+    implementation(platform(libs.androidx.compose.bom))
     implementation(project(":common"))
 }

@@ -40,6 +40,7 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.work.runtime)
     implementation(libs.coil)
+    implementation(libs.coil.network.okhttp)
     implementation(libs.google.android.material)
     implementation(libs.kotlinx.coroutines.play.services)
     implementation(libs.text.recognition)

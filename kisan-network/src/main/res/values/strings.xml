@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">Kisan Network</string>
     <string name="send_message">Send Message</string>
     <string name="hi_your_otp_is_this">Hi. Your OTP is: %1$s</string>
     <string name="need_read_contacts_permission">Need read contacts permission</string>

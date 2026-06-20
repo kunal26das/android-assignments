@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "465790335987",
+    "project_id": "android-assignments",
+    "storage_bucket": "android-assignments.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465790335987:android:b1cf3ad9eeeeaf140bf086",
+        "android_client_info": {
+          "package_name": "io.github.kunal26das.assignment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIZpxqdU1lrfk5BRpyiWqmRqm3v19JVUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465790335987:android:c0dc791d9fbf15ae0bf086",
+        "android_client_info": {
+          "package_name": "io.github.kunal26das.epifi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIZpxqdU1lrfk5BRpyiWqmRqm3v19JVUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465790335987:android:714e3113f90850a20bf086",
+        "android_client_info": {
+          "package_name": "io.github.kunal26das.navi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIZpxqdU1lrfk5BRpyiWqmRqm3v19JVUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
