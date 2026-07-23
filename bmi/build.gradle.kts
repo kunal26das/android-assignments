@@ -1,0 +1,38 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.compose)
+}
+
+android {
+    namespace = "io.github.kunal26das.bmi"
+    compileSdk = libs.versions.compile.get().toInt()
+
+    defaultConfig {
+        applicationId = "io.github.kunal26das.bmi"
+        minSdk = libs.versions.min.get().toInt()
+        targetSdk = libs.versions.target.get().toInt()
+    }
+
+    compileOptions {
+        sourceCompatibility = CompileOptions.Java
+        targetCompatibility = CompileOptions.Java
+    }
+
+    buildFeatures {
+        compose = true
+    }
+}
+
+dependencies {
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.compose.material.icons.extended)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.core)
+    implementation(libs.google.android.material)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(project(":common"))
+}

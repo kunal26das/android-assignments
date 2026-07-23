@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BMI</string>
+    <string name="bmi">BMI</string>
+    <string name="all_clear">AC</string>
+    <string name="go">GO</string>
+    <string name="decimal">.</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal">Normal</string>
+    <string name="overweight">Over weight</string>
+    <string name="information">Information</string>
+    <string name="bmi_underweight">16.0</string>
+    <string name="bmi_normal_start">18.5</string>
+    <string name="bmi_normal_end">25.0</string>
+    <string name="bmi_overweight">40.0</string>
+    <string name="back_arrow">Back Arrow</string>
+    <string name="delete">Delete</string>
+    <string name="invalid_bmi">Invalid BMI! Please check your input</string>
+</resources>

@@ -20,3 +20,6 @@ local.properties
 /radius/data/bin/
 /radius/domain/bin/
 /buildSrc/build/
+
+build/
+_to_delete/

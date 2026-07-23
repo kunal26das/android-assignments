@@ -8,6 +8,7 @@ pluginManagement {
 
 rootProject.name = "assignments"
 include(":alle")
+include(":bmi")
 include(":common")
 include(":cred:stack")
 include(":cred")
